@@ -87,7 +87,7 @@ cd bin/
 
 -- browse ur tomcat server on chrome
 
-
+```
 try to click on manager app ..
 
 find / -name context.xml
@@ -119,6 +119,8 @@ cd conf >>
  <user username="tomcat" password="s3cret" roles="admin-gui,manager-gui,manager-script"/>
   
   
+
+```
 
 ----Restart serivce and try to login to tomcat application from the browser. This time it should be Successful
 
