@@ -121,6 +121,29 @@ cd conf >>
   
 
 ```
+NOTE : Add like below :
+
+```
+
+<!--
+  The sample user and role entries below are intended for use with the
+  examples web application. They are wrapped in a comment and thus are ignored
+  when reading this file. If you wish to configure these users for use with the
+  examples web application, do not forget to remove the <!.. ..> that surrounds
+  them. You will also need to set the passwords to something appropriate.
+-->
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="<must-be-changed>" roles="tomcat"/>
+  <user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
+  <user username="role1" password="<must-be-changed>" roles="role1"/>
+-->
+ <role rolename="admin-gui,manager-gui,manager-script,manager-jmx,manager-status,admin-gui"/>
+ <user username="raman" password="raman" roles="admin-gui,manager-gui,manager-script"/>
+</tomcat-users>
+
+```
 
 ----Restart serivce and try to login to tomcat application from the browser. This time it should be Successful
 
