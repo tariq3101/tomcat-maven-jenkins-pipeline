@@ -150,6 +150,12 @@ NOTE : Add like below :
 steps are there in tomcat-server repo...
 Start jenkins and configure it ..
 
+
+=========================================================
+
+For freestyle project with plugins :
+```
+
 yum install maven -y
 
 yum install git -y
@@ -169,3 +175,37 @@ WAR/EAR files >> **/*.war
 SAVE AND BUILD
 
 -- Now poll the pipeline
+
+
+```
+====================================================================
+
+For declarative pipeline creation using Jenkinsfile :
+
+```
+
+for declarative pipeline :
+install  ,ssh-agent plugin
+
+tomcat-new : ID for credentials to ssh into tomcat server
+
+-- go to pipeline syntax and add ssh agent and define "tomcat-new" cred over there...
+ssh username wud pvt key 
+username : centos
+pvt-key
+
+
+sshagent(['tomcat-new']) {
+   //block
+}
+
+
+--- before running the build make sure to change permissions of tomcat folder in /opt
+
+cd /opt/
+  ls
+chown -R centos:centos apache-tomcat-9.0.78
+
+
+
+```
