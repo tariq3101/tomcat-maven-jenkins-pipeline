@@ -209,3 +209,5 @@ chown -R centos:centos apache-tomcat-9.0.78
 
 
 ```
+
+surf publicIP:8080/myweb
