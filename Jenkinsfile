@@ -28,7 +28,7 @@ pipeline{
             steps{
                 sshagent(['tomcat-new']) {
                 sh """
-                    scp -o StrictHostKeyChecking=no target/myweb.war  centos@52.90.126.206:/opt/apache-tomcat-9.0.78/webapps
+                    scp -o StrictHostKeyChecking=no webapp/target/myweb.war  centos@52.90.126.206:/opt/apache-tomcat-9.0.78/webapps
 
                     ssh centos@52.90.126.206 /opt/apache-tomcat-9.0.78/bin/shutdown.sh
                     
