@@ -2,10 +2,11 @@ currentBuild.displayName = "online-shopping-#"+currentBuild.number
 
 pipeline{
     agent any
-    
-#    environment{
-#        PATH = "/opt/maven3/bin:$PATH"
-#   }
+/*    
+     environment{
+        PATH = "/opt/maven3/bin:$PATH"
+     }
+ */    
     stages{
         stage("Git Checkout"){
             steps{
