@@ -1,2 +1,2 @@
-<h1> Hello All from Khanna !!! </h1>
-<h2> not Glad to see you here :)</h2>
+<h1> Hello nyc people !!! </h1>
+<h2>Good morning :)</h2>
