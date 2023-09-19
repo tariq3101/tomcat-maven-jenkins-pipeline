@@ -28,11 +28,11 @@ pipeline{
             steps{
                 sshagent(['tomcat-new']) {
                 sh """
-                    sudo scp -o StrictHostKeyChecking=no webapp/target/myweb.war  centos@44.204.8.191:/opt/apache-tomcat-9.0.78/webapps
+                    sudo scp -o StrictHostKeyChecking=no webapp/target/myweb.war  centos@54.224.40.223:/opt/apache-tomcat-9.0.80/webapps
 
-                    sudo ssh centos@44.204.8.191 /opt/apache-tomcat-9.0.78/bin/shutdown.sh
+                    sudo ssh centos@54.224.40.223 /opt/apache-tomcat-9.0.80/bin/shutdown.sh
                     
-                    sudo ssh centos@44.204.8.191 /opt/apache-tomcat-9.0.78/bin/startup.sh
+                    sudo ssh centos@54.224.40.223 /opt/apache-tomcat-9.0.80/bin/startup.sh
                 
                 """
             }
