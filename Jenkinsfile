@@ -28,7 +28,10 @@ pipeline{
             steps{
                 sshagent(['tomcat-new']) {
                 sh """
-                    sudo scp -v -o StrictHostKeyChecking=no webapp/target/myweb.war  centos@54.224.40.223:/opt/apache-tomcat-9.0.80/webapps
+                    [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0700 ~/.ssh
+                    ssh-keyscan -t rsa,dsa 54.224.40.223 >> ~/.ssh/known_hosts
+                    
+                    sudo scp -o StrictHostKeyChecking=no webapp/target/myweb.war  centos@54.224.40.223:/opt/apache-tomcat-9.0.80/webapps
 
                     sudo ssh centos@54.224.40.223 /opt/apache-tomcat-9.0.80/bin/shutdown.sh
                     
