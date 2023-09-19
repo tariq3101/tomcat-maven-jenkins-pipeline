@@ -166,7 +166,7 @@ https://github.com/ramannkhanna2/hello-world-maven-pipeline.git
 
 under execute shell >>
 
-mvn clean mvn package
+mvn clean package
 
 --- from dashboard , add "deploy to container" plugin under post build steps >> add deploy to container , mention tomcat server's username and password and url to deploy
 
