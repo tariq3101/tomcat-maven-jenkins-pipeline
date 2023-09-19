@@ -28,14 +28,12 @@ pipeline{
             steps{
                 sshagent(['tomcat-new']) {
                 sh """
-                    [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0700 ~/.ssh
-                    ssh-keyscan -t rsa,dsa 54.224.40.223 >> ~/.ssh/known_hosts
                     
-                    sudo scp -o StrictHostKeyChecking=no webapp/target/myweb.war  centos@54.224.40.223:/opt/apache-tomcat-9.0.80/webapps
+                    sudo scp -o StrictHostKeyChecking=no webapp/target/myweb.war  root@54.224.40.223:/opt/apache-tomcat-9.0.80/webapps
 
-                    sudo ssh centos@54.224.40.223 /opt/apache-tomcat-9.0.80/bin/shutdown.sh
+                    sudo ssh root@54.224.40.223 /opt/apache-tomcat-9.0.80/bin/shutdown.sh
                     
-                    sudo ssh centos@54.224.40.223 /opt/apache-tomcat-9.0.80/bin/startup.sh
+                    sudo ssh root@54.224.40.223 /opt/apache-tomcat-9.0.80/bin/startup.sh
                 
                 """
             }
