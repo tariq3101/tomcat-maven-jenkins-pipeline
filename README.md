@@ -195,6 +195,7 @@ ssh username wud pvt key
 username : centos
 pvt-key
 
+NOTE : UPDATE COMMANDS IN JENKINS FILE AS PER LATEST VERSION OF TOMCAT UR USING 
 
 sshagent(['tomcat-new']) {
    //block
