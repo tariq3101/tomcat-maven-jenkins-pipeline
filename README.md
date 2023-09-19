@@ -53,6 +53,13 @@ systemctl restart jenkins
 
 cat /var/lib/jenkins/secrets/initialAdminPassword
 
+
+{{
+NOTE :
+if thrs a failure due to java version :
+alternatives --config java
+}}
+
 -----
 
 
