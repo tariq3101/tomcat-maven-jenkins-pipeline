@@ -187,6 +187,7 @@ For declarative pipeline creation using Jenkinsfile :
 for declarative pipeline :
 install  ,ssh-agent plugin
 
+--- create jenkins credenials :
 tomcat-new : ID for credentials to ssh into tomcat server
 
 -- go to pipeline syntax and add ssh agent and define "tomcat-new" cred over there...
