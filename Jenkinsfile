@@ -29,7 +29,7 @@ pipeline{
                 sshagent(['tomcat-new']) {
                 sh """
                     
-                    sudo scp -o StrictHostKeyChecking=no -o ForwardAgent=yes webapp/target/myweb.war centos@54.224.40.223:/opt/apache-tomcat-9.0.80/webapps
+                    sudo scp -o StrictHostKeyChecking=no webapp/target/myweb.war centos@54.224.40.223:/opt/apache-tomcat-9.0.80/webapps
 
 
                     sudo ssh centos@54.224.40.223 /opt/apache-tomcat-9.0.80/bin/shutdown.sh
