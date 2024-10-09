@@ -2,15 +2,17 @@ currentBuild.displayName = "online-shopping-#"+currentBuild.number
 
 pipeline{
     agent any
-/*    
-     environment{
-        PATH = "/opt/maven3/bin:$PATH"
-     }
- */   
     tools {
-        maven 'm1'
+        jdk 'JDK 21'
+        maven 'maven'
     }
-
+    
+     environment {
+        WAR_FILE = 'target/java-tomcat-maven-eaxample.war'
+        TOMCAT_URL = 'http://localhost:7080'
+        TOMCAT_USER = 'Tariq'
+        TOMCAT_PASSWORD = 'tariq123'
+     }
     
     stages{
         stage("Git Checkout"){
